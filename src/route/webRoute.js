@@ -2,7 +2,7 @@ import express from "express";
 import getHomePage from "../controllers/HomeController";
 import aboutPage from "../controllers/AboutController";
 const router = express.Router()
-const initWebRoute = (app) =>{
+const initWebRoute = (app) => {
     // //defind
     // router.get('/', (req,res) =>{
     //     res.send('Birds home page')

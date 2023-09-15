@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bổ sung CSS của Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bổ sung CSS của Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title><%= data.title %></title>
+    <style>
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: #f9f9f9; /* Odd rows color */
+        }
+        .table-striped tbody tr:nth-child(even) {
+            background-color: #e0e0e0; /* Even rows color */
+        }
+    </style>
+</head>
+<body>
+    <table class="table table-striped">
+        <tr>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Tài khoản</th>
+            <th>Giới Tính</th>
+            <th>Email</th>
+            <th>Địa Chỉ</th>
+            <th>Quyền</th>
+            <th>Hiệu Chỉnh</th>
+        </tr>
+        <% for(let i=0;i<data.rows.length;i++) { %>
+        <tr>
+            <td><%= i+1 %></td>
+            <td>
+                <%= data.rows[i].fullname %>
+            </td>
+            <td>
+                <%= data.rows[i].username %>
+            </td>
+            <td>
+                <%= data.rows[i].sex %>
+            </td>
+            <td>
+                <%= data.rows[i].email %>
+            </td>
+            <td>
+                <%= data.rows[i].address %>
+            </td>
+            <td>
+                <%= data.rows[i].status %>
+            </td>
+            <td>
+                <a href="/detail-user/<%= data.rows[i].id %>">
+                    <i class="fa fa-eye fa-lg" aria-hidden="true" style="color: chartreuse;"></i>
+                </a>
+                <i class="fa fa-pencil-square fa-lg" aria-hidden="true" style="color: rgb(211, 233, 132);"></i>
+                <i class="fa fa-trash fa-lg" aria-hidden="true" style="color: red;"></i>
+            </td>
+        </tr>
+        <% } %>    
+    </table>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -10,13 +10,6 @@ const port = process.env.PORT || 3000; // Sử dụng 3000 nếu PORT không đ�
 configViewEngine(app);
 initWebRoute(app);
 app.use(express.static(path.join(__dirname, 'public')))
-// app.get('/', (req, res) => {
-//     res.send('Hello World!');
-// });
-
-// app.get('/about', (req, res) => {
-//     res.render('About Page'); // Sửa thành res.send để gửi văn bản thay vì res.render
-// });
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
+  <title><%= data.title %></title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Đăng ký người dùng mới</h1>
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" class="form-control" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Tên tài khoản:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="sex">Giới tính:</label>
+        <input type="text" class="form-control" id="sex" name="sex" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Địa chỉ:</label>
+        <input type="text" class="form-control" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="status">Quyền:</label>
+        <input type="text" class="form-control" id="status" name="status" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Đăng ký</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS (optional, for certain Bootstrap features) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

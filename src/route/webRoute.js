@@ -12,8 +12,8 @@ const initWebRoute = (app) => {
     router.get('/about', aboutPage)
     // Xử lý đăng ký người dùng mới
     router.get('/register',register );
-    router.get('/list-user',userController.getAllUser);
-    router.get('/detail-user/:id',userController.detailUser);
+    router.get('/list-user/:trang',userController.getAllUser);
+    router.get('/detail-user/:username',userController.detailUser);
     router.get('/login-user', getLoginUser );
     // Sử dụng middleware 404 nếu không tìm thấy route
     router.use(handleNotFound);

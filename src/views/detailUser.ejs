@@ -1,49 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết người dùng</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
 <body>
     <div class="container mt-5">
-        <h1>Chi tiết người dùng</h1>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Họ Tên:</h5>
-                <p class="card-text"><%= data.rows.fullname %></p>
-            </div>
-        </div>
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Tài khoản:</h5>
-                <p class="card-text"><%= data.rows.username %></p>
-            </div>
-        </div>
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Địa chỉ:</h5>
-                <p class="card-text"><%= data.rows.address %></p>
-            </div>
-        </div>
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Email:</h5>
-                <p class="card-text"><%= data.rows.email %></p>
-            </div>
-        </div>
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title">Quyền:</h5>
-                <p class="card-text"><%= data.rows.status %></p>
-            </div>
-        </div>
+        <h1>Thông tin người dùng</h1>
+        <ul class="list-group">
+            <li class="list-group-item">Tài Khoản: <%= data.rows.username %></li>
+            <li class="list-group-item">Tên: <%= data.rows.fullname %></li>
+            <li class="list-group-item">Giới tính: <%= data.rows.sex %></li>
+            <li class="list-group-item">Địa chỉ: <%= data.rows.address %></li>
+            <li class="list-group-item">Email: <%= data.rows.email %></li>
+            <li class="list-group-item">Quyền: <%= data.rows.status %></li>
+        </ul>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+  

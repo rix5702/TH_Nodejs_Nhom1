@@ -1,5 +1,5 @@
 import express from "express"
 const aboutPage = (req, res) => {
-    return res.render("about", {data: { title: 'About website', content: 'about page'}})
+    return res.render("index", {data: { title: 'About website', page: 'about'}})
 }
 export default aboutPage

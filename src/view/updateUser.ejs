@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
+ 
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Chỉnh sửa người dùng</h1>
+    <form action="/update-user1" method="POST">
+      <div class="form-group">
+        <input type="text" class="form-control" id="stt" name="stt" value="<%= data.userEdit.stt %>" hidden>
+      </div>
+      <div class="form-group">
+        <label for="hoten">Họ và tên:</label>
+        <input type="text" class="form-control" id="hoten" name="hoten" value="<%= data.userEdit.hoten %>">
+      </div>
+      <div class="form-group">
+        <label for="account">Tên tài khoản:</label>
+        <input type="text" class="form-control" id="account" name="account" value="<%= data.userEdit.account %>">
+      </div>
+      <div class="form-group">
+        <label for="password">Mật Khẩu:</label>
+        <input type="password" class="form-control" id="password" name="password" value="<%= data.userEdit.password %>">
+      </div>
+      <div class="form-group">
+        <label for="gender">Giới tính:</label>
+        <input type="text" class="form-control" id="gender" name="gender" value="<%= data.userEdit.gender %>">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" value="<%= data.userEdit.email %>">
+      </div>
+      <div class="form-group">
+        <label for="address">Địa chỉ:</label>
+        <input type="text" class="form-control" id="address" name="address" value="<%= data.userEdit.address %>">
+      </div>
+      <div class="form-group">
+        <label for="groupid">Quyền:</label>
+        <input type="text" class="form-control" id="groupid" name="groupid" value="<%= data.userEdit.groupid %>">
+      </div>
+      <button type="submit" class="btn btn-primary">Đăng ký</button>
+    </form>
+  </div>

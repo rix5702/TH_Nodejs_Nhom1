@@ -6,24 +6,34 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   
-  <title><%= data.title %></title>
+ 
 </head>
 <body>
   <div class="container mt-5">
     <h1 class="mb-4">Đăng ký người dùng mới</h1>
-    <form action="/register" method="post">
+    <form action="/add-user" method="POST">
       <div class="form-group">
-        <label for="fullname">Họ và tên:</label>
-        <input type="text" class="form-control" id="fullname" name="fullname" required>
+        <label for="hoten">Họ và tên:</label>
+        <input type="text" class="form-control" id="hoten" name="hoten" required>
       </div>
       <div class="form-group">
-        <label for="username">Tên tài khoản:</label>
-        <input type="text" class="form-control" id="username" name="username" required>
+        <label for="account">Tên tài khoản:</label>
+        <input type="text" class="form-control" id="account" name="account" required>
       </div>
       <div class="form-group">
-        <label for="sex">Giới tính:</label>
-        <input type="text" class="form-control" id="sex" name="sex" required>
+        <label for="password">Mật khẩu:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
       </div>
+      <div class="form-group">
+ 
+        <label for="male">Nam</label>
+        <input type="checkbox" id="male" name="gender" value="1">
+    
+        <label for="female">Nữ</label>
+        <input type="checkbox" id="female" name="gender" value="2">
+      
+      
+      </div>     
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" name="email" required>
@@ -33,11 +43,9 @@
         <input type="text" class="form-control" id="address" name="address" required>
       </div>
       <div class="form-group">
-        <label for="status">Quyền:</label>
-        <input type="text" class="form-control" id="status" name="status" required>
+        <label for="groupid">Quyền:</label>
+        <input type="text" class="form-control" id="groupid" name="groupid" required>
       </div>
       <button type="submit" class="btn btn-primary">Đăng ký</button>
     </form>
   </div>
-
-

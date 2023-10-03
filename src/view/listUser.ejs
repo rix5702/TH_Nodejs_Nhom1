@@ -15,29 +15,34 @@
         <% for(let i=0; i<data.rows.length; i++) { %>
         <tr>
             <td><%= i+1 %></td>
-            <td><%= data.rows[i].fullname %></td>
-            <td><%= data.rows[i].username %></td>
-            <td><%= data.rows[i].sex %></td>
+            <td><%= data.rows[i].hoten %></td>
+            <td><%= data.rows[i].account %></td>
+            <td><%  if (data.rows[i].gender === 1) 
+                        { %> nam <% } 
+                    else if (data.rows[i].gender === 2) 
+                        { %> nữ <% } 
+                    else 
+                        { %> Unknown<% } %>
+            </td>
             <td><%= data.rows[i].email %></td>
             <td><%= data.rows[i].address %></td>
-            <td><%= data.rows[i].status %></td>
+            <td><%= data.rows[i].groupid %></td>
             <td>
-                <a href="/detail-user/<%= data.rows[i].username %>" class="btn btn-success">
-                    <i class="fas fa-eye"></i>
-                </a>
+              
                 <button class="btn btn-warning">
-                    <i class="fas fa-pencil-alt"></i>
+                   <a href="/update/<%= data.rows[i].stt %>"><i class="fas fa-pencil-alt"></i></a> 
                 </button>
                 <button class="btn btn-danger">
-                    <i class="fas fa-trash"></i>
+                   <a href="/delete/<%= data.rows[i].stt %>"> <i class="fas fa-trash"></i></a>
                 </button>
             </td>
         </tr>
         <% } %>
     </tbody>
 </table>
-<div>
-</div>
+<!-- <div>
+    <%=data.test%> -  <%=data.to%>
+</div> -->
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
